@@ -2,10 +2,10 @@ const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: "./client/src/index.tsx",
   mode: "development",
   devServer: {
-    watchFiles: ["src/**/*"],
+    watchFiles: ["client/src/**/*"],
   },
   module: {
     rules: [
@@ -26,7 +26,7 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: "src/index.html", to: "index.html" }],
+      patterns: [{ from: "client/src/index.html", to: "index.html" }],
     }),
   ],
   output: {
